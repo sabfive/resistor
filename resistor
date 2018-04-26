@@ -1,0 +1,70 @@
+
+package övning_resistor_sg;
+import java.util.Scanner;
+public class Övning_Resistor_SG {
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        // Färgkoderna
+        
+        int farg1, farg2, farg3, farg4; // Variablernas deklaration
+        
+        // Nedan visar menyn för användaren att mata in efter fråga
+        System.out.println("Färgkoder: 0=svart, 1=brun, 2=röd, 3=orange, 4=gul, 5=grön, 6=blå, 7=violett, 8=grå, 9=vit, 10=guld, 11=silver");
+        System.out.println("Ange färgen på de olika fägringar.");
+       
+        //Första fägring
+        System.out.println("Ange färg för den första fägringen: ");
+        farg1 = scan.nextInt();    
+                
+        //Andra fägring
+        System.out.println("Ange färg för den första fägringen: ");
+        farg2 = scan.nextInt();
+        
+        //Tredje fägring
+        System.out.println("Ange färg för den första fägringen: ");
+        farg3 = scan.nextInt();
+        
+        //Uträkning av resistansvärdet
+        int resistans = (farg1 * 10 + farg2) * 10^ farg3;
+        
+        System.out.println("Resistansvärder: " + resistans);
+        
+        
+        //Användare ska ange den fjärde färgen
+        System.out.println("Ange färg för den fjärde fägringen: ");
+        farg4 = scan.nextInt();
+       
+        int fargFyra = 0;
+        
+        //Uträkning för fjärde fägring
+            switch (fargFyra) {
+                case 1: System.out.print("Brun " + resistans * 0.01);
+                break;
+                case 2: System.out.println("Röd " + resistans * 0.02);
+                break;
+                case 3: System.out.println("Orange " + resistans * 0);
+                break;
+                case 4: System.out.println("Guld ");
+                break;
+                case 5: System.out.println("Grön ");
+                break;
+                case 6: System.out.println("Blå ");
+                break;
+                case 7: System.out.println("Violett ");
+                break;
+                case 8: System.out.println("Grå ");
+                break;
+                case 9: System.out.println("Vit ");
+                break;
+                case 10: System.out.println("Guld ");
+                break;
+                case 11: System.out.println("Silver ");
+             
+            }
+        
+            System.out.println("Resistansen för dessa utvalda färger är: " + fargFyra);
+    }
+    
+}
