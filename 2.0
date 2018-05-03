@@ -1,0 +1,72 @@
+
+package övning_resistor_sg;
+import java.util.Scanner;
+public class Övning_Resistor_SG {
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        // Färgkoderna
+        
+        int farg1, farg2, farg3, farg4 = 0; // Variablernas deklaration
+        
+        // Nedan visar menyn för användaren att mata in efter fråga
+        System.out.println("Färgkoder: 0=svart, 1=brun, 2=röd, 3=orange, 4=gul, 5=grön, 6=blå, 7=violett, 8=grå, 9=vit, 10=guld, 11=silver");
+        System.out.println("Ange färgen på de olika fägringar.");
+       
+        //Första fägring
+        System.out.println("Ange färg för den första fägringen: ");
+        farg1 = scan.nextInt();    
+                
+        //Andra fägring
+        System.out.println("Ange färg för den första fägringen: ");
+        farg2 = scan.nextInt();
+        
+        //Tredje fägring
+        System.out.println("Ange färg för den första fägringen: ");
+        farg3 = scan.nextInt();
+        
+       
+       double powResult;
+        powResult = (double) Math.pow(10, farg3);
+        
+     
+      double resistansVärde = (farg1 * 10 + farg2) *Math.pow(10, farg3);
+   
+      System.out.println("Resistansvärdet är: " + resistansVärde);
+       
+        //Användare ska ange den fjärde färgen
+        System.out.println("Ange färg för den fjärde fägringen: ");
+        farg4 = scan.nextInt();
+        
+        
+        //Uträkning för fjärde fägring
+            switch (farg4) {
+                case 1: System.out.print(0.000 * resistansVärde);
+                break;
+                case 2: System.out.println(0.01 * resistansVärde);
+                break;
+                case 3: System.out.println(0.02 * resistansVärde);
+                break;
+                case 4: System.out.println(0.00 * resistansVärde);
+                break;
+                case 5: System.out.println(0.00 * resistansVärde);
+                break;
+                case 6: System.out.println(0.005 * resistansVärde);
+                break;
+                case 7: System.out.println(0.0025 * resistansVärde);
+                break;
+                case 8: System.out.println(0.01 * resistansVärde);
+                break;
+                case 9: System.out.println(0.005 * resistansVärde);
+                break;
+                case 10: System.out.println(0.000 * resistansVärde);
+                break;
+                case 11: System.out.println(0.010 * resistansVärde);
+             
+            }
+            
+        
+    }
+    
+}
